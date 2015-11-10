@@ -1,0 +1,38 @@
+
+
+This credits text file is dedicated to all external contributions.
+The assets and contributors mentioned here were not part of the team,
+but provided their assets free of charge.
+
+
+ART RESOURCES
+
+	-The water texture that was used for the background was
+	 provided by opengameart.org user, Jattenalle. Their
+	 profile can be found at this URL: http://opengameart.org/users/jattenalle
+	 Their project, "Gods and Idols", can be found at this
+	 URL: http://www.godsandidols.com/
+
+	-The rocks that were used to form the top and bottom of the screen
+	 were provided by opengameart.org user, phaelax. Their profile
+	 can be found at this URL: http://opengameart.org/users/phaelax
+
+	-The laser image was provided by opengameart.org user, Rawdanitsu.
+	 Their profile can be found at this URL: http://opengameart.org/users/rawdanitsu
+
+
+SOURCE CODE
+
+	-Some external resources were used in order to understand Cocos2d
+	 syntax (which is what Spritebuilder uses). Programming Dolphin
+	 Defense was made possible because of two online tutorials that I
+	 completed. Both tutorials were provided by www.makeschool.com.
+	
+	-The first tutorial, Peeved Penguins, can be found at this
+	 URL: https://www.makeschool.com/tutorials/getting-started-with-spritebuilder/
+
+	-The second tutorial, Flappy Fly, can be found at this
+	 URL: https://www.makeschool.com/gamernews/369/build-your-own-flappy-bird-with-spritebuilder-and?source=mgwu
+
+	-Also, I must thank my wonderful instructor, Dr. Yang. It was only because
+	 of this class, that I was able to utilize Xcode effectively. Thank you! :)
