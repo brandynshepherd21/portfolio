@@ -1,0 +1,26 @@
+﻿@model ALOHASystem.Models.NewInventoryViewModel
+@{
+    ViewBag.Title = "InventoryUpdateView";
+}
+
+<div class="col-md-offset-2">
+    <h1>Update Inventory Item</h1>
+    <br /><br />
+    <h4>Select Item to Update</h4>
+    @using (Ajax.BeginForm("itemUpdateForm", "Home", new AjaxOptions() { HttpMethod = "POST", UpdateTargetId = "itemInfoDiv", InsertionMode = InsertionMode.Replace }))
+    {
+        <br />
+        <label>Item Name</label>
+        <br />
+        @Html.DropDownList("lstItemName", new SelectList(Model.name, Model.name), new { @id = "itemName" })
+        
+        <input type="submit" class="btn btn-warning" value="Find Current Item" />
+     }
+        <br />
+    @using (@Html.BeginForm("itemUpdate", "Home"))
+    {
+        <div id="itemInfoDiv"></div>
+    }
+</div>
+
+

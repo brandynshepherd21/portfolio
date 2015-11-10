@@ -1,0 +1,5 @@
+W:\ALOHASystem\DataAccess\bin\Release\DataAccess.dll
+W:\ALOHASystem\DataAccess\bin\Release\DataAccess.pdb
+W:\ALOHASystem\DataAccess\obj\Release\DataAccess.csprojResolveAssemblyReference.cache
+W:\ALOHASystem\DataAccess\obj\Release\DataAccess.dll
+W:\ALOHASystem\DataAccess\obj\Release\DataAccess.pdb

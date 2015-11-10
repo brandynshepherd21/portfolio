@@ -1,0 +1,66 @@
+﻿@model ALOHASystem.Models.LstCustomerInfo
+
+@{
+    ViewBag.Title = "FindCustomerView";
+}
+
+<div class="col-md-offset-2">
+    <h1>Current Inventory</h1>
+    <div class="well well-sm">
+        @using (@Html.BeginForm("RemoveCustomer", "Home"))
+        {
+            <table class="table table-striped">
+                <tr>
+                    <th>
+                        <p>ID</p>
+                    </th>
+                    <th>
+                        <p>First Name</p>
+                    </th>
+                    <th>
+                        <p>Last Name</p>
+                    </th>
+                    <th>
+                        <p>Phone</p>
+                    </th>
+                    <th>
+                        <p>Email</p>
+                    </th>
+                    <th>
+                        <p>Address</p>
+                    </th>
+                    <th>
+                        Remove
+                    </th>
+                </tr>
+                @for (var i = 0; i < Model.ID.Count; i++)
+                {
+                    <tr>
+                        <td>
+                            <p>@Model.ID[i]</p>
+                        </td>
+                        <td>
+                            <p>@Model.Fname[i]</p>
+                        </td>
+                        <td>
+                            <p>@Model.Lname[i]</p>
+                        </td>
+                        <td>
+                            <p>@Model.Phone[i]</p>
+                        </td>
+                        <td>
+                            <p>@Model.Email[i]</p>
+                        </td>
+                        <td>
+                            <p>@Model.Address[i]</p>
+                        </td>
+                        <td>
+                            <span><input type="submit" name="submitbtn" class="btn btn-warning" value="@Model.ID[i]" /></span>
+                        </td>
+                    </tr>
+                }
+            </table>
+        }
+    </div>
+</div>
+

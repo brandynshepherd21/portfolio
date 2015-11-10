@@ -1,0 +1,53 @@
+﻿@model ALOHASystem.Models.NewInventoryViewModel
+@{
+    ViewBag.Title = "InventoryView";
+}
+
+<div class="col-md-offset-2">
+    <h1>Current Inventory</h1>
+    <div class="well well-sm">   
+    @using (@Html.BeginForm("RemoveItem", "Home"))
+    {
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    <p>ID</p>
+                </th>
+                <th>
+                    <p>Name</p>
+                </th>
+                <th>
+                    <p>Price</p>
+                </th>
+                <th>
+                    <p>Quantity</p>
+                </th>
+                <th>
+                    Remove
+                </th>
+            </tr>
+            @for (var i = 0; i < Model.id.Count; i++)
+            {
+                <tr>
+                    <td>
+                        <p>@Model.id[i]</p>
+                    </td>
+                    <td>
+                        <p>@Model.name[i]</p>
+                    </td>
+                    <td>
+                        <p>$ @Model.price[i]</p>
+                    </td>
+                    <td>
+                        <p>@Model.quantity[i]</p>
+                    </td>
+                    <td>
+                        <span><input type="submit" name="submitbtn" class="btn btn-warning" value="@Model.name[i]" /></span>
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+    </div>
+</div>
+

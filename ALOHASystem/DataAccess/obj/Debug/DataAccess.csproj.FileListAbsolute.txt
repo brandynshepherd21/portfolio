@@ -1,0 +1,10 @@
+C:\anthonygitprojects\PersonalProjects\ALOHASystem\DataAccess\bin\Debug\DataAccess.dll
+C:\anthonygitprojects\PersonalProjects\ALOHASystem\DataAccess\bin\Debug\DataAccess.pdb
+C:\anthonygitprojects\PersonalProjects\ALOHASystem\DataAccess\obj\Debug\DataAccess.dll
+C:\anthonygitprojects\PersonalProjects\ALOHASystem\DataAccess\obj\Debug\DataAccess.pdb
+C:\anthonygitprojects\PersonalProjects\ALOHASystem\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+W:\ALOHASystem\DataAccess\bin\Debug\DataAccess.dll
+W:\ALOHASystem\DataAccess\bin\Debug\DataAccess.pdb
+W:\ALOHASystem\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+W:\ALOHASystem\DataAccess\obj\Debug\DataAccess.dll
+W:\ALOHASystem\DataAccess\obj\Debug\DataAccess.pdb

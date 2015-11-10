@@ -1,0 +1,53 @@
+﻿@model ALOHASystem.Models.OrderCartViewModel
+<div class="well well-sm">
+    <h3>Order Cart:</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Order ID
+                </th>
+                <th>
+                    Item Name
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Quantity
+                </th>
+                <th>
+                    Date Ordered
+                </th>
+                <th>
+                    Order Status
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in @Model.lstOrderedInfo)
+            {
+                <tr>
+                    <td>
+                        @item.orderID
+                    </td>
+                    <td>
+                        @item.itemName
+                    </td>
+                    <td>
+                        @item.itemPrice
+                    </td>
+                    <td>
+                        @item.itemQuantity
+                    </td>
+                    <td>
+                        @item.date
+                    </td>
+                    <td>
+                        @item.status
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

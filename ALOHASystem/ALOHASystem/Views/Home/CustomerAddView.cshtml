@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "CustomerAddView";
+}
+
+<div class="col-md-offset-2">
+    <h1>Add New Customer </h1>
+    <div class="well well-sm col-md-4">
+        @using (@Html.BeginForm("GetNewCustomerForm", "Home"))
+        {
+            <label>First Name:</label>
+            <br />
+            @Html.TextBox("FName");
+            <br />
+            <label>Last Name:</label>
+            <br />
+            @Html.TextBox("LName");
+            <br />
+            <label>Phone:</label>
+            <br />
+            @Html.TextBox("Phone");
+            <br />
+            <label>Email:</label>
+            <br />
+            @Html.TextBox("Email");
+            <br />
+            <label>Address:</label>
+            <br />
+            @Html.TextBox("Address");
+            <br /><br />
+            <input type="submit" name="Submit" class="btn btn-warning" value="Submit" />
+        }
+    </div>
+</div>
+

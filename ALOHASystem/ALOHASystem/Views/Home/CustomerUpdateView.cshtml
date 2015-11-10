@@ -1,0 +1,24 @@
+﻿@model ALOHASystem.Models.UpdateCustomerModel
+@{
+    ViewBag.Title = "CustomerUpdateView";
+}
+<div class="col-md-offset-2">
+    <h1>Update Customer</h1>
+    <br /><br />
+    <h4>Select Customer ID to Update</h4>
+    @using (Ajax.BeginForm("customerUpdateForm", "Home", new AjaxOptions() { HttpMethod = "POST", UpdateTargetId = "customerInfoDiv", InsertionMode = InsertionMode.Replace }))
+    {
+        <br />
+        <label>Customer ID</label>
+        <br />
+        @Html.DropDownList("lstCustomerID", new SelectList(Model.CustomerID, Model.CustomerID), new { @id = "CustomerID" })
+
+        <input type="submit" class="btn btn-warning" value="Find Current Customer" />
+    }
+    <br />
+    @using (@Html.BeginForm("customerUpdate", "Home"))
+    {
+        <div id="customerInfoDiv"></div>
+    }
+</div>
+

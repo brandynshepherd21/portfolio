@@ -1,0 +1,33 @@
+﻿@model ALOHASystem.Models.finances
+@{
+    ViewBag.Title = "FinanceView";
+}
+
+<div class="col-md-offset-2">
+    <h1>Company Profits</h1>
+    <br />
+    <div class="row">
+        <div class="thumbnail col-md-3" id="net">
+            <center>
+                <h2>Net profit</h2>
+                <br />
+                <h3>$@Model.net</h3>
+            </center>
+        </div>
+        <div class="thumbnail col-md-3" id="amazon">
+            <center>
+                <h2>Amazon</h2>
+                <br />
+                <h3>$@Model.amazon</h3>
+            </center>
+        </div>
+        <div class="thumbnail col-md-3" id="gross">
+            <center>
+                <h2>Gross profit</h2>
+                <br />
+                <h3>$@Model.gross</h3>
+            </center>
+        </div>
+    </div>
+</div>
+

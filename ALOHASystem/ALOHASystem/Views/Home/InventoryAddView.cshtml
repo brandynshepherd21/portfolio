@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "InventoryAddView";
+}
+<div class="col-md-offset-2">
+    <h1>Add New Item to Inventory </h1>
+</div>
+<div class="col-md-offset-2 col-md-4 well well-sm">
+    @using (@Html.BeginForm("GetNewItemForm", "Home"))
+    {
+        <label>Item Name:</label>
+        <br />
+        @Html.TextBox("IName");
+        <br />
+        <label>Item Price:</label>
+        <br />
+        @Html.TextBox("IPrice");
+        <br />
+        <label>Quantity Available:</label>
+        <br />
+        @Html.TextBox("Quantity");
+        <br /><br />
+        <input type="submit" name="Submit" class="btn btn-warning" value="Submit" />
+    }
+</div>

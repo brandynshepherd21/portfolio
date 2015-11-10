@@ -1,0 +1,26 @@
+﻿@model ALOHASystem.Models.NewInventoryViewModel
+
+
+<div class="well well-sm col-md-4">
+    @foreach (var item in @Model.lstItem)
+    {
+        <input type="text" name="productID" value="@item.ProductID" hidden="hidden"/>
+        <br />
+        <label>Item Name:</label>
+        <br />
+        <input type="text" name ="name" value="@item.Name" />
+        <br />
+        <label>Item Price:</label>
+        <br />
+        <input type="text" name="price" value="@item.Price" />
+        <br />
+        <label>Item Quantity:</label>
+        <br />
+        <input type="text" name="quantity"value="@item.Quantity" />
+        <br />
+        <br />
+        <input type="submit" class="btn btn-warning" value="Update" />
+    }
+
+</div>
+

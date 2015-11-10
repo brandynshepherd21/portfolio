@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "CustomerFindOrderView";
+}
+
+<div class="col-md-offset-2">
+    <h1>Find Order</h1>
+    <br /><br />
+    <h4>Select an Option for Search</h4>
+    <br />
+    @using (Ajax.BeginForm("OrderSearch", "Home", new AjaxOptions() { HttpMethod = "POST", UpdateTargetId = "searchDiv", InsertionMode = InsertionMode.Replace }))
+    {
+        <div class="row">
+            <div class="col-md-4">
+                <label>Customer ID</label>
+                <br />
+                @Html.TextBox("CustomerID")
+                <br />
+                <input type="submit" name="button" class="btn btn-warning" value="Search by Customer ID" />
+            </div>
+            <div class="col-md-4">
+                <label>Order ID</label>
+                <br />
+                @Html.TextBox("OrderID")
+                <br />
+                <input type="submit" name="button" class="btn btn-warning" value="Search by Order ID" />
+            </div>
+        </div>
+    }
+    <br />
+    @using (@Html.BeginForm("searchOrder", "Home"))
+    {
+        <div id="searchDiv"></div>
+    }
+</div>
+
+

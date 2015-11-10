@@ -1,0 +1,58 @@
+﻿@model ALOHASystem.Models.OrderCartViewModel
+
+<div class="well well-sm">
+    <h3>Order Cart:</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    CustomerID
+                </th>
+                <th>
+                    ProductID
+                </th>
+                <th>
+                    Product Name
+                </th>
+                <th>
+                    Quantity
+                </th>
+                <th>
+                    x
+                </th>
+                <th>
+                    Price
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var CartItem in @Model.lstOrder)
+            {
+                <tr>
+                    <td>
+                        @CartItem.CustomerID
+                    </td>
+                    <td>
+                        @CartItem.ProductID
+                    </td>
+                    <td>
+                        @CartItem.Name
+                    </td>
+                    <td id="quan" q="@CartItem.ProductQuantity">
+                        @CartItem.ProductQuantity
+                    </td>
+                    <td>
+                        x
+                    </td>
+                    <td id="pric" pri="@CartItem.Price">
+                        @CartItem.Price
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h3>$@Model.total</h3>
+    <input type="submit" class="btn btn-warning" value="Checkout" id="Checkout" />
+</div>
+
+

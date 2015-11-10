@@ -1,0 +1,41 @@
+﻿@model ALOHASystem.Models.OrderViewModel
+@{
+    ViewBag.Title = "OrderView";
+    
+}
+        <div class="col-md-offset-2">
+            @using(Ajax.BeginForm("GetOrderInfoForm", "Home", new AjaxOptions ()
+                { HttpMethod = "POST", UpdateTargetId = "cartDiv", InsertionMode = InsertionMode.Replace }))
+            {
+                <h1>Create A New Order </h1>
+                <br />
+                <label>Customer ID:</label>
+                <br />
+                
+                @Html.DropDownList("lstCustomerID", new SelectList(Model.CustomerID, Model.CustomerID), new { @id = "CustomerID"})
+                <br />
+                @Html.ActionLink("Click for New Customer", "CustomerAddView", "Home")
+                <br /><br />
+                <label>Product Name:</label>
+                <br />
+                <select id="lstItem" name="lstItem">
+                    @foreach (var item in Model.lstItemOrderViewModel)
+                    {
+                        <option quantity="@item.Quantity" value="@item.Name">@item.Name</option>
+                    }
+                </select>
+                <br />
+                <label>Quantity:</label>
+                <br />
+                <select name ="Quantity" id="lstProductRange"></select>
+                <br /><br />
+                <input type="submit" class="btn btn-warning" value="Add To Cart" id="AddToCart"/>
+            }
+            <br /><br />
+            
+            <br />
+            @using (@Html.BeginForm("Checkout", "Home"))
+            {
+                <div id="cartDiv"></div>
+            } 
+        </div>

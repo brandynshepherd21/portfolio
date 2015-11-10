@@ -1,0 +1,34 @@
+﻿@model ALOHASystem.Models.UpdateCustomerModel
+
+
+<div class="well well-sm col-md-4">
+    @foreach (var item in @Model.lstCustomer)
+    {
+        <input type="text" name="customerID" value="@item.id" hidden="hidden"/>
+        <br />
+        <label>First Name:</label>
+        <br />
+        <input type="text" name ="first" value="@item.first" />
+        <br />
+        <label>Last Name:</label>
+        <br />
+        <input type="text" name="last" value="@item.last" />
+        <br />
+        <label>Phone:</label>
+        <br />
+        <input type="text" name="phone" value="@item.phone" />
+        <br />
+        <label>Email:</label>
+        <br />
+        <input type="text" name="email"value="@item.email" />
+        <br />
+        <label>Address:</label>
+        <br />
+        <input type="text" name="address" value="@item.address" />
+        <br />
+        <br />
+        <input type="submit" class="btn btn-warning" value="Update" />
+    }
+
+</div>
+

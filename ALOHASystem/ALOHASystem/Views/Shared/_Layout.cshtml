@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/ManageCss")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Scripts/Chart.min.js")
+
+    
+
+</head>
+<body>
+    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                @Html.ActionLink("ALOHA Manager", "ManagerView", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div class="content">
+            <div id="wrapper" class="active">
+
+                <!-- Sidebar -->
+                <!-- Sidebar -->
+                    <div id="sidebar-wrapper">
+                        <ul class="sidebar-nav" id="sidebar">
+                            <li id="HomeManageView">@Html.ActionLink("Home", "ManagerView", "Home")</li>
+                            <li id="OrderView">@Html.ActionLink("Order", "OrderView", "Home")</li>
+                            <li class="dropdown" id="CustomerView">
+                                @Html.ActionLink("Customer", "CustomerAddView", "Home", new { @class = "dropdown-toggle", data_toggle = "dropdown" })
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Find Customer", "FindCustomerView", "Home")</li>
+                                    <li>@Html.ActionLink("Add", "CustomerAddView", "Home")</li>
+                                    <li>@Html.ActionLink("Update", "CustomerUpdateView", "Home")</li>
+                                    <li>@Html.ActionLink("Find Order", "CustomerFindOrderView", "Home")</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                @Html.ActionLink("Inventory", "InventoryView", "Home", new { @class = "dropdown-toggle", data_toggle = "dropdown" })
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("View", "InventoryView", "Home")</li>
+                                    <li>@Html.ActionLink("Add Item", "InventoryAddView", "Home")</li>
+                                    <li>@Html.ActionLink("Update", "InventoryUpdateView", "Home")</li>
+                                </ul>
+                            </li>
+                            <li id="Finances">@Html.ActionLink("Finances", "FinanceView", "Home")</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="page-content-wrapper">
+                    <div class="page-content inset">
+                        <div class="row">
+                        </div>
+                        @RenderBody()
+                        </div>
+                    </div>
+            </div>
+        </div>
+   
+
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿body {
+    background-image: url("img/loginBackground.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.well{
+    background-color: rgba(23, 142, 173, 0.5);
+}
+a{
+    color:black !important;
+}
